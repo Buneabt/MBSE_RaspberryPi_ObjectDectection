@@ -149,11 +149,11 @@
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="106790c6-64f4-4cc2-bebd-e18272432bef" name="3.0 Sense Objects - Visual">
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
-              id="7758ae24-67ed-4f99-aa40-991c7a9ad7bb" involved="#8dc88a44-6aee-4f89-ab17-fe3e44250b8c"/>
-          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="7d1b960e-fc00-4478-b8cf-d0990e7ca95d" involved="#8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="f2f206d7-67b3-46a1-aada-f5371569a42b" involved="#43f4817d-da1c-47f9-bec1-ef99bff3e145"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="b0d59b32-8b57-463a-ad3a-642e1ff19d03" involved="#89afba42-d279-4a02-bab8-3cc4318b5d60"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="583e4601-bf0e-4760-8a53-34f612d110cc" name="4.0 Aggregate Sensor Data">
@@ -161,8 +161,6 @@
               id="67d5fba3-31c2-40f9-a14c-5bdf19f3811b" involved="#9faeb99f-c605-4c9f-ab9f-8d47330951b8"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="49d419c6-1c2d-4c49-9117-7b3623365224" involved="#2152a22f-cd48-4776-915c-5523332eac66"/>
-          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
-              id="3856e142-e925-486c-a448-9f7deadc1038" involved="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="db99db13-0609-4f11-9876-35bab53538af" name="7.0 Update Display">
@@ -181,7 +179,7 @@
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="8999e1db-3d9e-4828-b5f3-0b670e29ff6a" name="5.0 Store Data">
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
-              id="afc73096-6968-4848-88e7-cdcd2b4e2201" involved="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
+              id="051e7f4d-6608-4844-9e1f-d1e8f499db8c" involved="#2152a22f-cd48-4776-915c-5523332eac66"/>
         </ownedOperationalCapabilities>
       </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
@@ -206,10 +204,10 @@
               name="User Interface" abstractType="#f169864e-d393-4418-a825-de180edd76f1"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="5ce41d06-78f5-4630-8f68-592e34062cad"
               name="Data Storage" abstractType="#2152a22f-cd48-4776-915c-5523332eac66"/>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="838c1629-8aca-4815-838f-ef2598d33945"
-              name="Processor" abstractType="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="c9c6a6ee-9c71-44da-b039-31a9299bd712"
               name="Software Factory" abstractType="#631dabf9-e63f-48c3-82e0-9042bf8dd97f"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="33cf615f-0352-4633-861c-e92efb3e20e8"
+              name="Maintainer" abstractType="#5f76630e-f031-40d1-9ef0-aa9549f081fd"/>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="9faeb99f-c605-4c9f-ab9f-8d47330951b8"
               name="Raspberry Pi 4 Sensor System">
             <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
@@ -283,7 +281,7 @@
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="e592a8bc-a87a-4237-83c2-032ff6556ab1"
                 name="Visual" abstractType="#8343046d-2f2e-49b3-b806-b8f442a84055"/>
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="54273414-8346-4819-8610-3e9cd2a81da6"
-                name="Test Environmen" abstractType="#c2538b6d-ff50-4b0c-94ca-58fed3146cf2"/>
+                name="Test Environment" abstractType="#c2538b6d-ff50-4b0c-94ca-58fed3146cf2"/>
             <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"
                 name="Sonar">
               <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
@@ -293,7 +291,7 @@
             <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8343046d-2f2e-49b3-b806-b8f442a84055"
                 name="Visual"/>
             <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="c2538b6d-ff50-4b0c-94ca-58fed3146cf2"
-                name="Test Environmen"/>
+                name="Test Environment"/>
           </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="f169864e-d393-4418-a825-de180edd76f1"
               name="User Interface">
@@ -329,24 +327,11 @@
                 id="eed9d46f-9582-4a6a-8678-39b84f2f4d70" targetElement="#3df748c7-1ea7-4057-996e-43621c67b273"
                 sourceElement="#2152a22f-cd48-4776-915c-5523332eac66"/>
           </ownedEntities>
-          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="43165ac1-8fac-45ae-9a88-748844d7555b"
-              name="Processor">
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="a35c1e0a-1716-418a-949f-299f768951df" targetElement="#8de7a1de-366b-4863-b93e-c3c63115f466"
-                sourceElement="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="39a40fb6-0d1c-4882-a57d-000281096c70" targetElement="#b3463629-d3c9-4247-a43f-4c84af182f2d"
-                sourceElement="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="945dd6e1-0950-4d59-8c21-ed3126ae89e0" targetElement="#f5cb132f-9634-44cd-acfb-320c6e7ade13"
-                sourceElement="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="82307910-4630-43e7-9537-7a6f4c2a86bf" targetElement="#45a8cc5d-9520-44f5-8d04-a1095e43f9e8"
-                sourceElement="#43165ac1-8fac-45ae-9a88-748844d7555b"/>
-          </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="631dabf9-e63f-48c3-82e0-9042bf8dd97f"
               name="Software Factory" summary="The user updating the cod" actor="true"
               human="true"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="5f76630e-f031-40d1-9ef0-aa9549f081fd"
+              name="Maintainer" actor="true" human="true"/>
         </ownedEntities>
       </ownedEntityPkg>
     </ownedArchitectures>
