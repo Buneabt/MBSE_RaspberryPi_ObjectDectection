@@ -45,29 +45,29 @@
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
             id="d47fa3c7-a6b1-4cfa-b6bc-6e2de3bd8c54" name="Root Operational Activity">
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="cb82c00c-5d49-4310-b483-444f5f8c5473" name="1.1 Send Sonar Tasking"/>
+              id="cb82c00c-5d49-4310-b483-444f5f8c5473" name="1.3 Send Sonar Tasking"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="a56ebe83-4510-4b18-a8da-d21f8480af13" name="1.3 Send Camera Tasking"/>
+              id="a56ebe83-4510-4b18-a8da-d21f8480af13" name="1.5 Send Camera Tasking"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="ed9d0953-0d57-4eef-a549-c979564a7619" name="1.2 Receive Sonar Tasking"/>
+              id="ed9d0953-0d57-4eef-a549-c979564a7619" name="1.4 Receive Sonar Tasking"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="25acb6f4-19e3-4c3d-b8c0-8a1a36453852" name="1.4 Receive Camera Tasking"/>
+              id="25acb6f4-19e3-4c3d-b8c0-8a1a36453852" name="1.6 Receive Camera Tasking"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="d1a68468-c1ac-4eac-8a52-c8c31a9f0c35" name="1.5 Display Component Tasking to Operator"/>
+              id="d1a68468-c1ac-4eac-8a52-c8c31a9f0c35" name="1.7 Display Component Tasking to Operator"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="724e0388-292e-4e6e-b772-73a8a167d932" name="2.1 Send Sonar Wavelength"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="8d803f39-c3fe-4b65-bf32-bc558aa4a4f3" name="2.2 Provide Sonar Environment"/>
+              id="8d803f39-c3fe-4b65-bf32-bc558aa4a4f3" name="2.2 Environmental Calibration "/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="afcacb7a-e0f5-420c-922a-d037b1eb3f55" name="3.1 Receive Sonar Wavelength"/>
+              id="afcacb7a-e0f5-420c-922a-d037b1eb3f55" name="2. Receive Sonar Wavelength"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="aa0c27e3-a5cf-4a01-926f-f571f034f380" name="3.2 Send sonar data for processing"/>
+              id="aa0c27e3-a5cf-4a01-926f-f571f034f380" name="2.4 Send sonar data for processing"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="9d3b31f0-6c99-4d92-b51d-53de05de7791" name="4.1 Take Photo"/>
+              id="9d3b31f0-6c99-4d92-b51d-53de05de7791" name="3.1 Take Photo"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="69fe9ef6-4f5a-49da-a55e-4e166eb405d5" name="5.1 Receive Image"/>
+              id="69fe9ef6-4f5a-49da-a55e-4e166eb405d5" name="3.2 Receive Image"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="1ebceb2a-5f56-4bb3-9a4a-8c737b7a178f" name="5.2 Send Image for processing"/>
+              id="1ebceb2a-5f56-4bb3-9a4a-8c737b7a178f" name="3.3 Send Image for processing"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="8de7a1de-366b-4863-b93e-c3c63115f466" name="6.0 Recieve Sensor Data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -75,14 +75,25 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="f5cb132f-9634-44cd-acfb-320c6e7ade13" name="6.2 Process Camera Data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="45a8cc5d-9520-44f5-8d04-a1095e43f9e8" name="6.3 Aggregate Data"/>
+              id="45a8cc5d-9520-44f5-8d04-a1095e43f9e8" name="6.4 Aggregate Data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="478fdbb4-9cd2-4ff7-a21d-e71d8800adc4" name="7.0 Output Data"/>
+              id="478fdbb4-9cd2-4ff7-a21d-e71d8800adc4" name="7.1 Pull Data From Storage"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="3df748c7-1ea7-4057-996e-43621c67b273" name="6.5 Store Processed Data"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="76935e58-77e9-4f70-bdf4-e13275582b4a" name="RF Signal" target="#8d803f39-c3fe-4b65-bf32-bc558aa4a4f3"
-              source="#724e0388-292e-4e6e-b772-73a8a167d932"/>
+              id="3df748c7-1ea7-4057-996e-43621c67b273" name="5.1 Store Processed Data"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="944cdffc-bfe6-41f8-9863-f23b28926b3f" name="1.1 Configure Sonar"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="9f461da7-a56a-470d-965d-827c44afa3df" name="1.2 Configure Camera"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="395dda42-0b19-4561-92a3-aa59de574d88" name="6.3 Image Correction"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="4a0218f2-11ef-4d1d-88d7-9d1549713e9a" name="7.0 Ping Components"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="f6f6781d-8296-4999-813e-bd0786700ca2" name="7.1 Display Component Status"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="8e05a767-c631-4e90-a7fc-bcdd8c874cb9" name="5. Store Component Status"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="cf493628-3531-4b7e-b0d1-6e0b31e1116c" name="7.1 Output Data"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="227fd0a5-73d5-4152-824a-f8fcfcef7800" name="Image Data" target="#8de7a1de-366b-4863-b93e-c3c63115f466"
               source="#1ebceb2a-5f56-4bb3-9a4a-8c737b7a178f"/>
@@ -104,30 +115,6 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e3e5f8ce-c2a2-4ee9-b053-5ff7717dba47" name="Display Processed Data"
               target="#478fdbb4-9cd2-4ff7-a21d-e71d8800adc4" source="#45a8cc5d-9520-44f5-8d04-a1095e43f9e8"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="dde112b8-c104-4055-b81f-6cfd9bde028d" name="Camera Tasking" target="#25acb6f4-19e3-4c3d-b8c0-8a1a36453852"
-              source="#a56ebe83-4510-4b18-a8da-d21f8480af13"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="cc1b541c-bcbe-4f33-823e-ac5fcb2e4320" name="Image" target="#69fe9ef6-4f5a-49da-a55e-4e166eb405d5"
-              source="#9d3b31f0-6c99-4d92-b51d-53de05de7791"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="bd47a3ba-71a5-4ffe-a854-df9061057efd" name="Distance" target="#afcacb7a-e0f5-420c-922a-d037b1eb3f55"
-              source="#724e0388-292e-4e6e-b772-73a8a167d932"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="6d06da22-ceae-40b8-a1f4-052cdcace521" name="Distance" target="#aa0c27e3-a5cf-4a01-926f-f571f034f380"
-              source="#afcacb7a-e0f5-420c-922a-d037b1eb3f55"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="5eda439b-1a13-4002-8916-032402efd849" name="Sonar Tasking" target="#ed9d0953-0d57-4eef-a549-c979564a7619"
-              source="#cb82c00c-5d49-4310-b483-444f5f8c5473"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="a726ad99-db89-4ac6-91da-e43bfcf2bb0c" name="Image" target="#1ebceb2a-5f56-4bb3-9a4a-8c737b7a178f"
-              source="#69fe9ef6-4f5a-49da-a55e-4e166eb405d5"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="22946004-345c-48e3-b5ad-6b8ead9ff63f" name="Current Camera Task"
-              target="#d1a68468-c1ac-4eac-8a52-c8c31a9f0c35" source="#a56ebe83-4510-4b18-a8da-d21f8480af13"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="a9cfac1f-9633-4749-811f-abcc029f30bd" name="Current Sonar Task"
-              target="#d1a68468-c1ac-4eac-8a52-c8c31a9f0c35" source="#cb82c00c-5d49-4310-b483-444f5f8c5473"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -163,14 +150,14 @@
               id="49d419c6-1c2d-4c49-9117-7b3623365224" involved="#2152a22f-cd48-4776-915c-5523332eac66"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="db99db13-0609-4f11-9876-35bab53538af" name="7.0 Update Display">
+            id="db99db13-0609-4f11-9876-35bab53538af" name="6.0 Update Display">
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="342117ca-7d95-46c4-86d7-5db69e20c3db" involved="#f169864e-d393-4418-a825-de180edd76f1"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="7be11e4a-517e-4db2-a1dc-26a7776505b4" involved="#2152a22f-cd48-4776-915c-5523332eac66"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="8dc5ca13-22c2-49c9-abf6-26156dc2985e" name="8.0 Provide System Status">
+            id="8dc5ca13-22c2-49c9-abf6-26156dc2985e" name="7.0 Provide System Status">
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="84773473-8051-4c38-bfa6-96dd36206595" involved="#f169864e-d393-4418-a825-de180edd76f1"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
