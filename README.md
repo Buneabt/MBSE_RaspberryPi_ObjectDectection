@@ -6,7 +6,7 @@
 Current List of things to Revise/Do
 
 [OEBD]
-* [ ] Think of development.  There are development stations throughout the lab that will be used to test and develop the systems. They should be included.  If this is the processing unit, I would change the name to make it clearer. See similar [OCB] comment as well.
+* [In Discussion] Think of development.  There are development stations throughout the lab that will be used to test and develop the systems. They should be included.  If this is the processing unit, I would change the name to make it clearer. See similar [OCB] comment as well.
 * [x] If you are going to do several SW releases, some "SW factory entity
 * [x] There should also be a debug entity, either a maintainer actor (even if that is you) and an associated "provide system status" OC.
 * [Not Needed] I would put the sonar and camera directly into the domain block.  When you do the [OAB] it will make the job easier and provide insight to what crosses between the sensors and the RP system.
@@ -22,7 +22,7 @@ Current List of things to Revise/Do
 * [Not Needed] Same comment about putting the camera and sonar on the same level as the RP4.
   
 [OABD]
-* [ ] Most sensors need to be initiated /configured prior to tasking.  I would add the configure activities
-* [ ] 2.2 the audible environment is a system entity and should not be an activity.  If the sensor needs any calibration, that should be an activity.  If the sonar pulse chain needs to gerated before it is sent, that should be another activity.
-* [ ] 5.0 There is significant correction in image processing to include: Image filters, Dewarping (corrects for rounded lens), Contrast/Distortion control, Compression, Overlay addition, EO/IR fusion, Object detection, Chipping, etc.  You can keep this at a high level and make it an "Image Correction" Activity.
-* [ ] If you add the Status System OC, there should be some get, send & process BIT Status Activities
+* [x] Most sensors need to be initiated /configured prior to tasking.  I would add the configure activities
+* [x] 2.2 the audible environment is a system entity and should not be an activity.  If the sensor needs any calibration, that should be an activity.  If the sonar pulse chain needs to gerated before it is sent, that should be another activity.
+* [x] 5.0 There is significant correction in image processing to include: Image filters, Dewarping (corrects for rounded lens), Contrast/Distortion control, Compression, Overlay addition, EO/IR fusion, Object detection, Chipping, etc.  You can keep this at a high level and make it an "Image Correction" Activity.
+* [x] If you add the Status System OC, there should be some get, send & process BIT Status Activities
