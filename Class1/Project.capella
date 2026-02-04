@@ -437,9 +437,495 @@
           id="07b1d9da-ccbb-40c1-a2bf-388f838a8c26" name="System Functions">
         <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
             id="a9870b92-7872-47c0-8421-3c6260fec6ed" name="Root System Function">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="452cb2a7-9750-4ffe-acd4-a3b9ed7a2961" name="1.3 Send Sonar Tasking">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="66be32f4-e4aa-4f9b-a1b5-a573ae6713bd" name="inStatus Sonar"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="ec5aa348-f75e-444e-940d-ce2f0c9fdd3f" name="outSonar Tasks"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="226df263-b1ba-4a63-9f35-e5426bf04b9f" name="outS-Task"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="0acc6a01-4a11-42da-9a40-a0c44ff69d17" targetElement="#cb82c00c-5d49-4310-b483-444f5f8c5473"
+                sourceElement="#452cb2a7-9750-4ffe-acd4-a3b9ed7a2961"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="a4424e0d-8efb-4347-a231-183e4c4f11c6" name="1.5 Send Camera Tasking">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="7803bbbf-25df-4b4b-8a62-eae2847b02cb" name="inStatus Camera"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="73b323e1-40e2-4c54-bc46-2ea0e8a72bce" name="outCamera Tasks"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="fcbd42e1-9eeb-41b5-8ede-aa8d435959f9" name="outC-Task"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="15412384-dc76-4c1c-8178-8c3c0297d837" targetElement="#a56ebe83-4510-4b18-a8da-d21f8480af13"
+                sourceElement="#a4424e0d-8efb-4347-a231-183e4c4f11c6"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="d5dc2ac4-c208-45f5-9e10-5ec1c867c524" name="1.4 Receive Sonar Tasking">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="7be588ef-650b-48c1-8ba1-3fc599f6bfcd" name="inSonar Tasks"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="236220e9-e1a8-4914-b8d1-28a342029898" name="outSonar Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="ef6f5a13-b403-4ac9-9f5c-d77420d574fe" name="outS-Ping Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="9838c701-0910-4ade-9ea7-e1f5f7912589" name="outS-Env Information"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="1e100e75-9b8a-4fb0-9ca4-4b7a8bebacfd" targetElement="#ed9d0953-0d57-4eef-a549-c979564a7619"
+                sourceElement="#d5dc2ac4-c208-45f5-9e10-5ec1c867c524"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="50330f93-ac9a-4e81-902f-d3b98754aa51" name="1.6 Receive Camera Tasking">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="aa14df86-7505-4fb8-9dd7-486d8af73f4b" name="inCamera Tasks"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="1b4482cb-4253-4336-b4e3-317e81ac3922" name="outCamera Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="76cd08cf-02a4-47d0-8f23-345e4172971b" name="outC-Ping Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="0ad558b2-11f8-4c21-a6c3-3cae2651d36a" name="outV-Env Information"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="c8280767-5e55-4aef-bc2a-19e1d188e3bc" targetElement="#25acb6f4-19e3-4c3d-b8c0-8a1a36453852"
+                sourceElement="#50330f93-ac9a-4e81-902f-d3b98754aa51"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="1aaed04f-a0fe-4b6e-b9bf-502766cfb0c3" name="1.7 Display Component Tasking to Operator">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="a6520ec1-4313-4e1f-8a42-7c138c9ed244" name="inS-Task"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="791461f4-88aa-428d-86c8-f211407622e8" name="inC-Task"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="3ed32c60-21c6-44d1-9ae9-8b28823fd34a" targetElement="#d1a68468-c1ac-4eac-8a52-c8c31a9f0c35"
+                sourceElement="#1aaed04f-a0fe-4b6e-b9bf-502766cfb0c3"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="18fedbdd-871a-4b13-b93a-ad01c818f2af" name="2.1 Send Sonar Wavelength">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="4d2b00c3-d405-4510-9a55-2ad974a20a05" name="inSonar Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="d774f574-3762-43f5-9dc9-78ebef5b8b70" name="outRaw S-Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="b39c57a1-9168-4195-9c95-20c326ab7b7c" targetElement="#724e0388-292e-4e6e-b772-73a8a167d932"
+                sourceElement="#18fedbdd-871a-4b13-b93a-ad01c818f2af"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="dc18015b-a0dd-48ef-bdef-8da3055bf8b4" name="2.2 Receive Sonar Wavelength">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="93652c13-b09c-4d40-84f6-5fc0e56d3524" name="inRaw S-Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="669b5e0c-bf8e-4c6f-bedb-4fc64584a692" name="outRaw S-Dat"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="e30e0185-46ca-4864-ad4c-3a5701d6f550" targetElement="#afcacb7a-e0f5-420c-922a-d037b1eb3f55"
+                sourceElement="#dc18015b-a0dd-48ef-bdef-8da3055bf8b4"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="7fc85fda-f311-44f1-b4a8-d55ed94db5df" name="2.3 Send sonar data for processing">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="85f1da1b-b7ed-4ee4-8380-ee0f93a0563f" name="inRaw S-Dat"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="bf67dc15-523d-4304-b050-a77dd99ba5a5" name="outRaw S-Dat"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="ab7b69ff-b6d0-427b-8897-4ab895eb4aeb" targetElement="#aa0c27e3-a5cf-4a01-926f-f571f034f380"
+                sourceElement="#7fc85fda-f311-44f1-b4a8-d55ed94db5df"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="f06545f1-7e55-49be-a865-1c573583df56" name="3.1 Take Photo">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="b5bc6e20-0dc7-4815-aa88-3d0a5e2144b5" name="inCamera Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="1e80a47c-5c10-4566-b716-89306e048db9" name="outRaw C-Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="576b6456-001b-4036-812d-93c9199bc81a" targetElement="#9d3b31f0-6c99-4d92-b51d-53de05de7791"
+                sourceElement="#f06545f1-7e55-49be-a865-1c573583df56"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="11575287-e0d2-42f1-8a49-b3028ec5fcc9" name="3.2 Receive Image">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="0b5b9c30-bbc7-45e0-aa20-e6be9a517210" name="inRaw C-Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="72a5a7d0-42d9-43f4-9287-ae90dfce402f" name="outRaw C-Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="5f8d4f0e-d4c1-402e-8d72-83ed4c49bffd" targetElement="#69fe9ef6-4f5a-49da-a55e-4e166eb405d5"
+                sourceElement="#11575287-e0d2-42f1-8a49-b3028ec5fcc9"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="7c8d4616-17f2-4905-b792-cbad439316bd" name="3.3 Send Image for processing">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="850b67a6-64cc-4a3e-b745-7a28d2c13646" name="inRaw C-Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="3c1d72d4-ac40-49e5-b16e-f5efba678283" name="outRaw C-Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="f66f6a4f-659b-4bec-a0ec-cba1f32f2223" targetElement="#1ebceb2a-5f56-4bb3-9a4a-8c737b7a178f"
+                sourceElement="#7c8d4616-17f2-4905-b792-cbad439316bd"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="1c62a466-fb35-4863-a097-919af3c9332d" name="4.0 Recieve Sensor Data">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="d444360c-ca4f-41a6-8875-bf403201c002" name="inRaw C-Data"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="201637b2-2acb-48f2-8001-b87b0f1ea18f" name="inRaw S-Dat"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="b84cc0a4-059a-4e5e-a897-d6e0b59cfadc" name="outRaw Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="37388014-868d-4c0e-a0b2-3c17021104ce" name="outRaw Camera Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="9e24d6c5-c982-479a-8d74-8dbf26208dd2" targetElement="#8de7a1de-366b-4863-b93e-c3c63115f466"
+                sourceElement="#1c62a466-fb35-4863-a097-919af3c9332d"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="dd1fdca0-5b41-4be7-94ec-7a17f2a24001" name="4.1 Process Sonar Data">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="aeba360a-3796-44df-8173-df4deb8fb1f8" name="inRaw Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="2bd7a21b-5a5d-45a5-b79b-22d0085db260" name="outSensor Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="a9e5a40c-8378-480c-9b59-147634b77f64" targetElement="#b3463629-d3c9-4247-a43f-4c84af182f2d"
+                sourceElement="#dd1fdca0-5b41-4be7-94ec-7a17f2a24001"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="49330903-682a-43cd-8c4d-4ac3af80aed3" name="4.2 Process Camera Data">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="7cf8351f-343a-4cd7-9706-f10c6da9c17a" name="inClear Images"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="40f3c70d-55c8-4ae5-a8cd-d0b56d41a572" name="outCamera Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="ded62195-dade-40d3-bda1-15f5114802c0" targetElement="#f5cb132f-9634-44cd-acfb-320c6e7ade13"
+                sourceElement="#49330903-682a-43cd-8c4d-4ac3af80aed3"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="15e23ed2-33fc-4826-ab20-717c538c2cc8" name="4.4 Aggregate Data">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="82463759-cdcd-44fc-b1ee-c109f1be4e1d" name="inSensor Data"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="d77369ad-3ddc-40a3-9e80-b421092150b2" name="inCamera Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="f0fe9969-9c17-4736-bf25-1f663edee543" name="outSend Processed Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="6031112b-7b75-485c-9f2c-e1785be6c7c7" targetElement="#45a8cc5d-9520-44f5-8d04-a1095e43f9e8"
+                sourceElement="#15e23ed2-33fc-4826-ab20-717c538c2cc8"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="77229e62-0d7a-4f82-b365-9862f0d5703f" name="6.1 Pull Data From Storage">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="fd58b922-eecb-49f0-aeb2-f925d0f2b2bb" name="inSend Data"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="179d5110-4e29-4f92-8db3-cda08993cc5b" name="inComponent Status Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="2600850e-c1a4-407f-80f1-d9bbec77abbb" name="outPositioning Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="f3937b58-0557-4bad-9c19-2d569c4133fc" name="outComponent Status Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="ea5001d6-556d-4943-98fb-909962d2ffd4" targetElement="#478fdbb4-9cd2-4ff7-a21d-e71d8800adc4"
+                sourceElement="#77229e62-0d7a-4f82-b365-9862f0d5703f"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="f78e56cb-f96c-4054-8766-aea2032c6a3d" name="5.1 Store Processed Data">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="31a8c128-9177-403a-ac0e-85044549ecc0" name="inSend Processed Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="cea764a1-f037-480c-817f-96b6731406fe" name="outSend Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="f6ca76ad-2505-4cc9-a5e9-e845b19059ce" targetElement="#3df748c7-1ea7-4057-996e-43621c67b273"
+                sourceElement="#f78e56cb-f96c-4054-8766-aea2032c6a3d"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="20cd89aa-d983-49c3-94da-7d72b821565c" name="1.1 Configure Sonar">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="321ee0b9-99e2-4daa-ae70-d9c45e96b2a3" name="inS-Env Information"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="86b6f157-c50f-4f54-95d4-e1c56ed72f92" targetElement="#944cdffc-bfe6-41f8-9863-f23b28926b3f"
+                sourceElement="#20cd89aa-d983-49c3-94da-7d72b821565c"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="cd76ffde-d283-4880-87b9-ff3e02d60370" name="1.2 Configure Camera">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="f91f82cd-ccca-4692-877d-8a6fbe08b5cc" name="inV-Env Information"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="78afe1ce-0297-4810-a286-ec7bd5a6aa58" targetElement="#9f461da7-a56a-470d-965d-827c44afa3df"
+                sourceElement="#cd76ffde-d283-4880-87b9-ff3e02d60370"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="45edccc8-8672-4c16-8c96-d1fe412b36c7" name="4.3 Image Correction">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="c15a273b-33d0-423b-89ab-d9739dd4a40f" name="inRaw Camera Data"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="44386a98-0b96-41c3-967c-ae317ac56b3c" name="outClear Images"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="8256d2e6-4863-49e2-85af-f74555dd1d79" targetElement="#395dda42-0b19-4561-92a3-aa59de574d88"
+                sourceElement="#45edccc8-8672-4c16-8c96-d1fe412b36c7"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="2e4e1506-8b95-4d82-8faf-4914f5e07fe0" name="7.1 Ping Components">
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="7c91a140-9876-435b-b7a3-ad88781b6b1e" name="outStatus Sonar"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="b7c93d92-fefc-482c-bd5a-32fdbf7caedf" name="outStatus Camera"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="0e9519e7-0882-4653-8266-6f39e981ce91" targetElement="#4a0218f2-11ef-4d1d-88d7-9d1549713e9a"
+                sourceElement="#2e4e1506-8b95-4d82-8faf-4914f5e07fe0"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="4b4ed2c5-c229-4718-a9ef-42ee4a58304e" name="7.2 Display Component Status">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="c5f6c56c-59c6-4305-8893-7135fc16dca7" name="inComponent Status Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="b54836cc-9064-4c7d-9d2e-6a4546836e64" targetElement="#f6f6781d-8296-4999-813e-bd0786700ca2"
+                sourceElement="#4b4ed2c5-c229-4718-a9ef-42ee4a58304e"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="62e439f1-89c9-47f2-abbb-1f6495c5f2f0" name="5.2 Store Component Status">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="b9b80532-b08e-4a72-93a7-dbf9b4c67a47" name="inSonar Status"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="4c95e23a-f4ed-47c4-a881-add8a449a50e" name="inCamera Status"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="78322b31-f558-4b80-b82c-de0404d2324b" name="outComponent Status Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="e4a2392a-8b99-4ea6-bbdd-6985214a4f8b" targetElement="#8e05a767-c631-4e90-a7fc-bcdd8c874cb9"
+                sourceElement="#62e439f1-89c9-47f2-abbb-1f6495c5f2f0"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="dbe2a84a-7efb-4691-8c0b-ecb25218a53b" name="6.2 Output Data">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="0dfd8112-fad0-40f7-8b9d-9a9b72482cd7" name="inPositioning Data"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="1342b63a-ed14-4d91-a6bb-d209afcdc25b" targetElement="#cf493628-3531-4b7e-b0d1-6e0b31e1116c"
+                sourceElement="#dbe2a84a-7efb-4691-8c0b-ecb25218a53b"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="49584731-cff6-4b25-bd1a-daeea0711105" name="3.4 Send Camera Status">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="8739aad9-3566-4cd5-b981-b25d183ddfaf" name="inC-Ping Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="1a8356cb-c86d-4f98-9016-897d03d9d547" name="outCamera Status"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="3a7fba14-27f3-432e-bd03-efb0aa1336e1" targetElement="#e60486bb-82d5-4557-b453-b2422b8bd2e6"
+                sourceElement="#49584731-cff6-4b25-bd1a-daeea0711105"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="321e6971-0bc5-4e49-869f-d3fd95f05319" name="2.4 Send Sonar Status">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="b024785d-57f8-4721-916a-bb5df856b770" name="inS-Ping Instruction"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="c2acab99-eb62-4220-9136-789c47d472a5" name="outSonar Status"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="06b80bef-c878-4465-8bb9-fbb56b8b3dde" targetElement="#15d52f69-f219-425e-873c-08a12eeba7af"
+                sourceElement="#321e6971-0bc5-4e49-869f-d3fd95f05319"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="d457a90e-7664-42f9-99ce-a01a37944fe5" targetElement="#d47fa3c7-a6b1-4cfa-b6bc-6e2de3bd8c54"
               sourceElement="#a9870b92-7872-47c0-8421-3c6260fec6ed"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="61573e37-579e-4859-8b80-8a5c0d73e974" name="Raw C-Data" target="#d444360c-ca4f-41a6-8875-bf403201c002"
+              source="#3c1d72d4-ac40-49e5-b16e-f5efba678283">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="84dcf48c-0d63-4cbc-bbc8-6bbd099a47ba" targetElement="#227fd0a5-73d5-4152-824a-f8fcfcef7800"
+                sourceElement="#61573e37-579e-4859-8b80-8a5c0d73e974"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="03d7cff8-14b1-466e-8138-10a48ff9a9c8" name="Raw S-Dat" target="#201637b2-2acb-48f2-8001-b87b0f1ea18f"
+              source="#bf67dc15-523d-4304-b050-a77dd99ba5a5">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="8525d737-e120-4cdd-9786-99b7e3d14637" targetElement="#51e85054-97d9-4572-b693-4b61fc2586aa"
+                sourceElement="#03d7cff8-14b1-466e-8138-10a48ff9a9c8"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="b00b7014-376d-40c8-80ad-f44a01146bc6" name="Raw Data" target="#aeba360a-3796-44df-8173-df4deb8fb1f8"
+              source="#b84cc0a4-059a-4e5e-a897-d6e0b59cfadc">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="d18adf52-625b-44c9-a0ee-f9eecb94a686" targetElement="#a00c5bf8-3bfb-4ac6-898a-3d2153c17187"
+                sourceElement="#b00b7014-376d-40c8-80ad-f44a01146bc6"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="0e0c801e-2d07-4d17-9f6d-68365b2a9930" name="Sensor Data" target="#82463759-cdcd-44fc-b1ee-c109f1be4e1d"
+              source="#2bd7a21b-5a5d-45a5-b79b-22d0085db260">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="c3b20819-eef8-4ccd-ab5d-2d25f5b91726" targetElement="#b3a2d2f4-dd5e-4872-89e4-d883987c04ba"
+                sourceElement="#0e0c801e-2d07-4d17-9f6d-68365b2a9930"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="959b21b0-6b35-4f73-b682-4a3bea12c565" name="Send Processed Data"
+              target="#31a8c128-9177-403a-ac0e-85044549ecc0" source="#f0fe9969-9c17-4736-bf25-1f663edee543">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="06b8015b-cfe8-4a42-b3c7-2e7cacba5e16" targetElement="#52058053-4018-4f24-814d-e80981c31542"
+                sourceElement="#959b21b0-6b35-4f73-b682-4a3bea12c565"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="499619d4-b42f-4be8-8a6a-4499cf06bfeb" name="Raw Camera Data" target="#c15a273b-33d0-423b-89ab-d9739dd4a40f"
+              source="#37388014-868d-4c0e-a0b2-3c17021104ce">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="cfb410ad-1b79-42dd-b876-0d06fd51c782" targetElement="#4457a3be-461b-430c-bb50-cda130424a56"
+                sourceElement="#499619d4-b42f-4be8-8a6a-4499cf06bfeb"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="405fe62f-050a-489e-bd48-2ac1ce961a15" name="Clear Images" target="#7cf8351f-343a-4cd7-9706-f10c6da9c17a"
+              source="#44386a98-0b96-41c3-967c-ae317ac56b3c">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="a3b3c528-3b74-486d-bd34-8ec7df82f1bc" targetElement="#26f31751-a006-41a3-80ef-99ea13ee64e7"
+                sourceElement="#405fe62f-050a-489e-bd48-2ac1ce961a15"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="fc1f3a8e-9a05-44f7-bc28-8dd1b8ab023b" name="Camera Data" target="#d77369ad-3ddc-40a3-9e80-b421092150b2"
+              source="#40f3c70d-55c8-4ae5-a8cd-d0b56d41a572">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="cdf69426-195d-4f78-ab55-d27df0244852" targetElement="#4d992245-5123-4b50-b677-809df60a48d8"
+                sourceElement="#fc1f3a8e-9a05-44f7-bc28-8dd1b8ab023b"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a076c2a2-2b20-4857-96e9-77359daa0e34" name="Send Data" target="#fd58b922-eecb-49f0-aeb2-f925d0f2b2bb"
+              source="#cea764a1-f037-480c-817f-96b6731406fe">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="f2b3f5e8-4b7f-4cfe-b2ab-90d2cfb2bfd6" targetElement="#8825e0e1-d1dd-4b54-a14b-2c799aee9f1d"
+                sourceElement="#a076c2a2-2b20-4857-96e9-77359daa0e34"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a646987e-5c4e-4282-ac62-fff5be081351" name="Component Status Data"
+              target="#179d5110-4e29-4f92-8db3-cda08993cc5b" source="#78322b31-f558-4b80-b82c-de0404d2324b">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="1aab0630-8074-4ce6-abaa-1eeafd914157" targetElement="#e87acc5b-daae-4cf5-91b1-1c0d8613a0f5"
+                sourceElement="#a646987e-5c4e-4282-ac62-fff5be081351"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="f2511fa5-b251-460e-bbe2-4c1d52ad8373" name="Raw C-Data" target="#850b67a6-64cc-4a3e-b745-7a28d2c13646"
+              source="#72a5a7d0-42d9-43f4-9287-ae90dfce402f">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="462d87af-98c1-4fa0-9d8a-ced9c30f187c" targetElement="#84fde939-2535-48bb-9f7a-a74c9d80821a"
+                sourceElement="#f2511fa5-b251-460e-bbe2-4c1d52ad8373"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="cda30936-4302-468d-b8d3-436f69351be1" name="Raw C-Data" target="#0b5b9c30-bbc7-45e0-aa20-e6be9a517210"
+              source="#1e80a47c-5c10-4566-b716-89306e048db9">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="d789b517-475c-4f81-bc18-95eaf65314c0" targetElement="#bf586feb-cb7f-42f1-8460-e47f94a2a090"
+                sourceElement="#cda30936-4302-468d-b8d3-436f69351be1"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="05457599-bb33-4e5d-ac82-d1a91b189c57" name="Camera Instruction"
+              target="#b5bc6e20-0dc7-4815-aa88-3d0a5e2144b5" source="#1b4482cb-4253-4336-b4e3-317e81ac3922">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="86bfce63-b69b-4531-8931-e775f842b840" targetElement="#8d5c9e21-1242-4e1f-bfe3-1f8a33292bfa"
+                sourceElement="#05457599-bb33-4e5d-ac82-d1a91b189c57"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="9a53a6ee-e6bb-4f05-a823-0a2ffb0478f8" name="Sonar Instruction" target="#4d2b00c3-d405-4510-9a55-2ad974a20a05"
+              source="#236220e9-e1a8-4914-b8d1-28a342029898">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="504b1f51-c0c6-4db5-8b1d-2177232362e0" targetElement="#5d767c08-37e2-421b-9827-5b9f07706b67"
+                sourceElement="#9a53a6ee-e6bb-4f05-a823-0a2ffb0478f8"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="b1ffb50f-e69b-43a0-be2c-eafe30992e63" name="Raw S-Data" target="#93652c13-b09c-4d40-84f6-5fc0e56d3524"
+              source="#d774f574-3762-43f5-9dc9-78ebef5b8b70">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="ce13a370-2f96-4783-99f4-45ab2ba55a8e" targetElement="#7ffe9a6c-558b-4001-ba6a-6274c04f1698"
+                sourceElement="#b1ffb50f-e69b-43a0-be2c-eafe30992e63"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a4b6145f-0503-4887-8433-97d72e7ff0d6" name="Raw S-Dat" target="#85f1da1b-b7ed-4ee4-8380-ee0f93a0563f"
+              source="#669b5e0c-bf8e-4c6f-bedb-4fc64584a692">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="72226b6e-1c08-4894-b8c8-76476c83c7d1" targetElement="#2d2f211b-b77f-4f88-a245-008760332c98"
+                sourceElement="#a4b6145f-0503-4887-8433-97d72e7ff0d6"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a9746ddd-f64f-4a80-a67a-d23c4bb6c69d" name="Status Sonar" target="#66be32f4-e4aa-4f9b-a1b5-a573ae6713bd"
+              source="#7c91a140-9876-435b-b7a3-ad88781b6b1e">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="880da636-00ac-4ff4-8870-f19826101781" targetElement="#791e115d-4792-4635-b4b3-102d307a9bb3"
+                sourceElement="#a9746ddd-f64f-4a80-a67a-d23c4bb6c69d"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="289c9e76-0278-483b-8b72-b9f3c93231b6" name="Status Camera" target="#7803bbbf-25df-4b4b-8a62-eae2847b02cb"
+              source="#b7c93d92-fefc-482c-bd5a-32fdbf7caedf">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="92f42dab-4344-4c02-bc11-f6f8614103d8" targetElement="#aad15981-bf51-41f2-8b0c-183e65613d0a"
+                sourceElement="#289c9e76-0278-483b-8b72-b9f3c93231b6"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="9473ff49-5d41-497a-8612-df0068710b07" name="Sonar Tasks" target="#7be588ef-650b-48c1-8ba1-3fc599f6bfcd"
+              source="#ec5aa348-f75e-444e-940d-ce2f0c9fdd3f">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="00f1c577-2b01-44cc-b1a0-ec3e20bccfe1" targetElement="#b324504b-20b4-483e-9f1e-54c81f80d8aa"
+                sourceElement="#9473ff49-5d41-497a-8612-df0068710b07"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="ada4efea-e097-4ea7-bfbf-d029763f0837" name="Camera Tasks" target="#aa14df86-7505-4fb8-9dd7-486d8af73f4b"
+              source="#73b323e1-40e2-4c54-bc46-2ea0e8a72bce">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="2849441e-8c4a-4d9f-89b4-328b7ab043be" targetElement="#5d03cee1-05bc-460c-96af-353fb4677dee"
+                sourceElement="#ada4efea-e097-4ea7-bfbf-d029763f0837"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="6419a5e9-f23a-4830-932c-31581a2cd25c" name="C-Ping Instruction"
+              target="#8739aad9-3566-4cd5-b981-b25d183ddfaf" source="#76cd08cf-02a4-47d0-8f23-345e4172971b">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="a6ba00ce-d9bf-49a8-be75-cb286c96f9e6" targetElement="#9fcaeaac-de40-4d4c-95d5-609ac4d6b6a7"
+                sourceElement="#6419a5e9-f23a-4830-932c-31581a2cd25c"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7ff732b3-988f-4329-b0a6-48cbf8d36b68" name="S-Ping Instruction"
+              target="#b024785d-57f8-4721-916a-bb5df856b770" source="#ef6f5a13-b403-4ac9-9f5c-d77420d574fe">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="e2149036-071c-4717-8fd2-e540e45d310e" targetElement="#4ce16a6b-fe1b-4df3-8d20-6e0867084aee"
+                sourceElement="#7ff732b3-988f-4329-b0a6-48cbf8d36b68"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="6a797e1f-7474-42ef-b02d-c1d2f759d2cb" name="Sonar Status" target="#b9b80532-b08e-4a72-93a7-dbf9b4c67a47"
+              source="#c2acab99-eb62-4220-9136-789c47d472a5">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="bdbd9623-d945-4efb-b8b0-303c39e267a7" targetElement="#7326aa80-6f88-4654-9ce4-ad21675a2d65"
+                sourceElement="#6a797e1f-7474-42ef-b02d-c1d2f759d2cb"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="d36e48b5-42e9-43cf-bc68-8829f928e44b" name="Camera Status" target="#4c95e23a-f4ed-47c4-a881-add8a449a50e"
+              source="#1a8356cb-c86d-4f98-9016-897d03d9d547">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="37f2f032-c4af-4d4a-98e7-c4b0aee2e9d5" targetElement="#ded92c32-0e10-40c2-9e5d-e31e74ff53bb"
+                sourceElement="#d36e48b5-42e9-43cf-bc68-8829f928e44b"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="5faca5f2-2fd9-45aa-98eb-1448d4124469" name="Positioning Data" target="#0dfd8112-fad0-40f7-8b9d-9a9b72482cd7"
+              source="#2600850e-c1a4-407f-80f1-d9bbec77abbb">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="80886088-fd65-4039-90d8-52a98bc6bacb" targetElement="#7ea47613-9c3c-46c3-bd2a-29ead976e193"
+                sourceElement="#5faca5f2-2fd9-45aa-98eb-1448d4124469"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="0a9f68c8-587b-43a5-b7e2-798bd54f4f68" name="Component Status Data"
+              target="#c5f6c56c-59c6-4305-8893-7135fc16dca7" source="#f3937b58-0557-4bad-9c19-2d569c4133fc">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="750678be-084a-4575-a58f-d119db613de0" targetElement="#44be6f01-fa7d-41c0-88d1-e7dc474f436b"
+                sourceElement="#0a9f68c8-587b-43a5-b7e2-798bd54f4f68"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="aa763229-8162-4cfe-90fe-7edba7917d87" name="S-Task" target="#a6520ec1-4313-4e1f-8a42-7c138c9ed244"
+              source="#226df263-b1ba-4a63-9f35-e5426bf04b9f">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="630af9de-98e5-47b0-8536-323d26d6f2d1" targetElement="#30eed7d2-64d4-4a0b-98a3-72acceccd30c"
+                sourceElement="#aa763229-8162-4cfe-90fe-7edba7917d87"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="39a4a951-6e27-4af4-a192-428aec2007cc" name="C-Task" target="#791461f4-88aa-428d-86c8-f211407622e8"
+              source="#fcbd42e1-9eeb-41b5-8ede-aa8d435959f9">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="7992b94f-9c0d-423b-9d03-61b4fc6bc112" targetElement="#4f7a9849-3907-4738-95c6-f334496e8248"
+                sourceElement="#39a4a951-6e27-4af4-a192-428aec2007cc"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="402b10cd-6f24-4080-bcc7-9e83be5455f4" name="S-Env Information" target="#321ee0b9-99e2-4daa-ae70-d9c45e96b2a3"
+              source="#9838c701-0910-4ade-9ea7-e1f5f7912589">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="26a757a9-800f-4190-98ae-839a32dbe678" targetElement="#b961729c-51ac-4ec9-8a6d-f556bc9707f1"
+                sourceElement="#402b10cd-6f24-4080-bcc7-9e83be5455f4"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="8da4a9fa-a223-4c27-8cd8-086e4684961c" name="V-Env Information" target="#f91f82cd-ccca-4692-877d-8a6fbe08b5cc"
+              source="#0ad558b2-11f8-4c21-a6c3-3cae2651d36a">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="4651228a-6714-428d-a8ed-01c8d9772c1c" targetElement="#7b66df52-0d3b-4399-9048-f700950ffa3f"
+                sourceElement="#8da4a9fa-a223-4c27-8cd8-086e4684961c"/>
+          </ownedFunctionalExchanges>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
