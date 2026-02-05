@@ -934,13 +934,6 @@
         <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
             id="d637b9d5-a4fe-47f2-aaae-cd99cbfcc005" name="Capability 1">
           <ownedScenarios xsi:type="org.polarsys.capella.core.data.interaction:Scenario"
-              id="0f7ba839-e4d2-4ed0-9079-b84312bbed17" name="[IS] Capability 1" kind="INTERFACE">
-            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
-                id="2edb5a1b-ef2e-4253-86c1-5346100acbf9" name="System" representedInstance="#0e1ab595-7008-42c6-9715-2a66a4764ebc"/>
-            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
-                id="8b74ba61-8986-449a-a368-953ef6923ce7" name="SA 17" representedInstance="#83fbb695-5eb5-4186-893b-619b7d2484f2"/>
-          </ownedScenarios>
-          <ownedScenarios xsi:type="org.polarsys.capella.core.data.interaction:Scenario"
               id="db87acbf-0045-42bb-b10e-5014a201344a" name="[IS] External Interfaces"
               kind="INTERFACE">
             <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
