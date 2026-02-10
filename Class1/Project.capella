@@ -80,7 +80,7 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="3df748c7-1ea7-4057-996e-43621c67b273" name="5.1 Store Processed Data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="944cdffc-bfe6-41f8-9863-f23b28926b3f" name="1.1 Configure Sonar"/>
+              id="944cdffc-bfe6-41f8-9863-f23b28926b3f" name="1.1 Source Acoustic Spectrum"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="395dda42-0b19-4561-92a3-aa59de574d88" name="4.3 Image Correction"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -95,6 +95,8 @@
               id="e60486bb-82d5-4557-b453-b2422b8bd2e6" name="3.4 Send Camera Status"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="15d52f69-f219-425e-873c-08a12eeba7af" name="2.4 Send Sonar Status"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="b8a479a4-c7e9-44de-b556-e9b79a866471" name="1.2 Source Visible Spectrum"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="227fd0a5-73d5-4152-824a-f8fcfcef7800" name="Raw C-Data" target="#8de7a1de-366b-4863-b93e-c3c63115f466"
               source="#1ebceb2a-5f56-4bb3-9a4a-8c737b7a178f"/>
@@ -182,6 +184,9 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="b961729c-51ac-4ec9-8a6d-f556bc9707f1" name="S-Env Information" target="#944cdffc-bfe6-41f8-9863-f23b28926b3f"
               source="#ed9d0953-0d57-4eef-a549-c979564a7619"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a8df7349-b17a-4f46-9541-a6867107a001" name="V-Env Information" target="#b8a479a4-c7e9-44de-b556-e9b79a866471"
+              source="#25acb6f4-19e3-4c3d-b8c0-8a1a36453852"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -192,6 +197,8 @@
               id="769cc3f9-8178-4244-9256-93ecd69010c6" involved="#8dc88a44-6aee-4f89-ab17-fe3e44250b8c"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="314d2939-0679-4169-b3bf-f26183bc602d" involved="#8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="6b522fec-e519-440e-bb6e-f7975da86230" involved="#43f4817d-da1c-47f9-bec1-ef99bff3e145"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="7ba9dff9-6447-42ae-886f-637d65dd044b" name="1.0 Command and Control">
@@ -245,9 +252,9 @@
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="0b9aaa6b-cd89-4ae4-af1d-6e1b78ecfc23"
           name="Operational Entities">
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="58385b7f-bf56-4b91-979f-c6bbfab64d0b"
-            name="Raspberry Pi" abstractType="#78126f38-402b-4977-9f1d-caf9ae81a5fd"/>
+            name="Target Detection Domain" abstractType="#78126f38-402b-4977-9f1d-caf9ae81a5fd"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="78126f38-402b-4977-9f1d-caf9ae81a5fd"
-            name="Raspberry Pi">
+            name="Target Detection Domain">
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="a63e1033-eb2d-4955-82e1-0499b2d7595d"
               name="Raspberry Pi 4 Sensor System" abstractType="#9faeb99f-c605-4c9f-ab9f-8d47330951b8"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="3b74844c-8427-4d66-85a7-77d0573cab55"
@@ -352,17 +359,21 @@
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8ea5934d-3209-4c64-830a-f2a3ac90f9f9"
               name="Environment">
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="e592a8bc-a87a-4237-83c2-032ff6556ab1"
-                name="Visual" abstractType="#8343046d-2f2e-49b3-b806-b8f442a84055"/>
+                name="Visible Spectrum " abstractType="#8343046d-2f2e-49b3-b806-b8f442a84055"/>
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="54273414-8346-4819-8610-3e9cd2a81da6"
                 name="Test Environment" abstractType="#c2538b6d-ff50-4b0c-94ca-58fed3146cf2"/>
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="75013ca9-54ba-43db-a254-9265e458597a"
-                name="Sonar" abstractType="#8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"/>
+                name="Acoustic Noise" abstractType="#8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"/>
             <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8343046d-2f2e-49b3-b806-b8f442a84055"
-                name="Visual"/>
+                name="Visible Spectrum ">
+              <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                  id="dc0ca80c-42fd-4c65-afa5-e74a400ddea3" targetElement="#b8a479a4-c7e9-44de-b556-e9b79a866471"
+                  sourceElement="#8343046d-2f2e-49b3-b806-b8f442a84055"/>
+            </ownedEntities>
             <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="c2538b6d-ff50-4b0c-94ca-58fed3146cf2"
                 name="Test Environment"/>
             <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"
-                name="Sonar">
+                name="Acoustic Noise">
               <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                   id="fa59ab2d-177a-4471-a1af-e7101811f708" targetElement="#944cdffc-bfe6-41f8-9863-f23b28926b3f"
                   sourceElement="#8a4be1c1-bc7e-4250-bfe3-796ca0caa54f"/>
