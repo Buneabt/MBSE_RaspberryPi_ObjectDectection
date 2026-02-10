@@ -26,7 +26,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Activity%20Breakdown']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="Project.capella#d47fa3c7-a6b1-4cfa-b6bc-6e2de3bd8c54"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EQV9sP4bEfC19o7f2huXiQ" name="[OAB] Operational Entities" repPath="#_EQUIgP4bEfC19o7f2huXiQ" changeId="1770736083419">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EQV9sP4bEfC19o7f2huXiQ" name="[OAB] Operational Entities" repPath="#_EQUIgP4bEfC19o7f2huXiQ" changeId="1770746824457">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:EntityPkg" href="Project.capella#0b9aaa6b-cd89-4ae4-af1d-6e1b78ecfc23"/>
       </ownedRepresentationDescriptors>
@@ -3176,7 +3176,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']/@defaultLayer/@containerMappings[name='OAB_Entity1']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']/@defaultLayer/@containerMappings[name='OAB_Entity1']"/>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_QOlBQAIAEfG2w4wHRQaujg" name="1.3 Send Sonar Tasking" outgoingEdges="_rDd74AIHEfG2w4wHRQaujg _QM9PoAILEfG2w4wHRQaujg" incomingEdges="_j-QMsAIHEfG2w4wHRQaujg" width="7" height="7" resizeKind="NSEW">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_QOlBQAIAEfG2w4wHRQaujg" name="1.3 Send Sonar Tasking1" outgoingEdges="_rDd74AIHEfG2w4wHRQaujg _QM9PoAILEfG2w4wHRQaujg" incomingEdges="_j-QMsAIHEfG2w4wHRQaujg" width="7" height="7" resizeKind="NSEW">
           <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="Project.capella#cb82c00c-5d49-4310-b483-444f5f8c5473"/>
           <semanticElements xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="Project.capella#cb82c00c-5d49-4310-b483-444f5f8c5473"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
