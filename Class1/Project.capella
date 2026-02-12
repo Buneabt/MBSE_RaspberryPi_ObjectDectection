@@ -716,6 +716,8 @@
                 id="32b210dd-0e85-4cbf-beb9-54e5b70b614c" targetElement="#b8a479a4-c7e9-44de-b556-e9b79a866471"
                 sourceElement="#4dc85d0f-f8df-48a2-a3a1-5bf0eae10e68"/>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="0dc897da-873c-4f0a-8fbc-608e9c9ee526" name="SystemFunction 27"/>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="d457a90e-7664-42f9-99ce-a01a37944fe5" targetElement="#d47fa3c7-a6b1-4cfa-b6bc-6e2de3bd8c54"
               sourceElement="#a9870b92-7872-47c0-8421-3c6260fec6ed"/>
@@ -2472,9 +2474,21 @@
             name="Data Storage" abstractType="#711942c8-348c-4f21-935a-e784da083294"/>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="b2aee271-cb09-483d-921e-3ce195d385be" name="Logical System">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="1fffdbde-4951-4fc8-b835-aa74bff72dac"
+              name="Sensor system" abstractType="#a1f6de17-7ff1-4940-afc7-b9b3ebc5a704"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="9da10e9f-6955-4698-9640-3e8e26abd8e2"
+              name="Processing system" abstractType="#6410c32b-7c7c-4d4e-af36-74133092c031"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="7463e271-fc7f-4151-b651-6153d3983d4e"
+              name="Human Machine Interface" abstractType="#864f3e20-3352-4c8a-8f5f-934d2983854d"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="68f7a4d6-2de7-444d-9a0f-f2c6d28d7fd1" targetElement="#6e33357d-2048-4f92-b025-bc26ef740eb2"
               sourceElement="#b2aee271-cb09-483d-921e-3ce195d385be"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="a1f6de17-7ff1-4940-afc7-b9b3ebc5a704" name="Sensor system"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="6410c32b-7c7c-4d4e-af36-74133092c031" name="Processing system"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="864f3e20-3352-4c8a-8f5f-934d2983854d" name="Human Machine Interface"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="085a6569-0934-47a5-8a16-683b2c5ccc88" name="Operator" actor="true">
