@@ -17,6 +17,7 @@
     xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/6.0.0"
     xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/6.0.0"
     xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/6.0.0"
+    xmlns:org.polarsys.capella.core.data.pa.deployment="http://www.polarsys.org/capella/core/pa/deployment/6.0.0"
     id="e9dfc604-19b0-4d1c-8876-d673eb92d9b6"
     name="Project">
   <ownedExtensions xsi:type="libraries:ModelInformation" id="935328a3-6cc8-4a49-a750-2fe10141209a"/>
@@ -3847,6 +3848,22 @@
               name="Human Machine Interface" abstractType="#6a16efe7-3ae5-48be-82be-1269c54e2ae8"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="060ac6be-132a-4152-8bf1-9314b5451637"
               name="Data Storage System" abstractType="#73b8cb5e-1a08-4e5f-8ade-ba436141849a"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="737b5edc-078f-4f56-8480-38c1f7beef4a"
+              name="RP4 Assembly - HW/SW" abstractType="#4fe52d9d-8d4c-4f5b-8694-54798ed6e3a5"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="2eff3086-70e6-496b-b507-8372f9d867be"
+              name="BreadBoard - HW" abstractType="#56f07f04-15d4-4ccf-81a2-654cdf0f5f55"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="8d39ecbe-b6f9-40aa-ac19-258dbd0e19c1"
+              name="Power Cables - HW" abstractType="#bb0868f0-edcc-43db-8b57-97f520257066"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="1df7aaa5-5eab-410e-8695-26bc2741c4b3"
+              name="Ultrasonic Sensor - HW" abstractType="#316cb2d7-38ff-4ebf-aa5d-86f2bfb5c4de"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="be824bf2-f2db-42d8-9882-3972c40f2ed4"
+              name="Camera Sensor - HW" abstractType="#165d7b67-82e8-4a0c-83a5-c1174b5fd912"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="3cf2d17c-fa3e-4b19-a759-274b1bf17600"
+              name="HDMI Cable - HW" abstractType="#67d562f0-f4a1-49a6-baf4-596db6189bac"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="58ad61cc-80ed-444b-918c-d736b0936c0e"
+              name="Micro SD RAM Card - SW" abstractType="#2399cff6-ca1e-41ad-8d9a-dc1fee02762a"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="d62a7c10-ad04-47b0-a69a-430e11d371fb"
+              name="Micro SD RAM Card - HW" abstractType="#25d5ff93-7ad2-47ec-8001-3d3494e63de6"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="772ad8b8-de2f-4759-812e-d6a33bc975fb" targetElement="#b2aee271-cb09-483d-921e-3ce195d385be"
               sourceElement="#dc729bc2-aa46-4c2c-9b58-7d885764780d"/>
@@ -4002,6 +4019,67 @@
                 id="54ae8819-00c3-4b37-9e42-f91f625b5d33" targetElement="#4cb90210-d06f-4986-a99a-9b50aea34809"
                 sourceElement="#73b8cb5e-1a08-4e5f-8ade-ba436141849a"/>
           </ownedPhysicalComponents>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="4fe52d9d-8d4c-4f5b-8694-54798ed6e3a5" name="RP4 Assembly - HW/SW"
+              nature="NODE">
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="5f807f0e-93b8-4f7e-aa7b-b0b776a7b0db"
+                name="SoC - HW/SW" abstractType="#63982c79-e518-42d5-97f3-d744157036f4"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="e0ab10ce-453d-4769-aa71-fcf94cbb87c4"
+                name="GPIO 40 pin Header - HW" abstractType="#748ad4c5-b43f-4a3d-8b97-208ad5e7f2bb"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="4b6e53d6-628b-469d-abdc-9149835f3efd"
+                name="HDMI monitor connectors - HW" abstractType="#9a467a37-4bab-464a-979d-13d4d066a84f"/>
+            <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                id="63982c79-e518-42d5-97f3-d744157036f4" name="SoC - HW/SW" nature="NODE">
+              <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="0417d012-1bb8-400e-ba23-e8dad41e27c6"
+                  name="Micro SD RAM card - HW/SW" abstractType="#87e938eb-2522-4eb6-bc38-ed90cc6036ca"/>
+              <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                  id="87e938eb-2522-4eb6-bc38-ed90cc6036ca" name="Micro SD RAM card - HW/SW"
+                  nature="NODE">
+                <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="53218013-4a34-444e-981d-df47506b6f80"
+                    name="Micro SD RAM Card - HW" abstractType="#f8d6bd0a-de98-4b3b-93e3-24eb85f2faf1">
+                  <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                      id="2c4fdd6e-5518-4047-8180-3ff0cd3f822f" deployedElement="#d62a7c10-ad04-47b0-a69a-430e11d371fb"
+                      location="#53218013-4a34-444e-981d-df47506b6f80"/>
+                </ownedFeatures>
+                <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="42bf07e4-d3ae-4a04-809d-304d06fc5e25"
+                    name="Micro SD RAM Card - SW" abstractType="#5349a183-c550-43f4-8c6b-70b1f4d11db1">
+                  <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                      id="ed9ae408-52a3-4dcf-a6a4-fb4b95820745" deployedElement="#58ad61cc-80ed-444b-918c-d736b0936c0e"
+                      location="#42bf07e4-d3ae-4a04-809d-304d06fc5e25"/>
+                </ownedFeatures>
+                <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                    id="f8d6bd0a-de98-4b3b-93e3-24eb85f2faf1" name="Micro SD RAM Card - HW"
+                    nature="NODE"/>
+                <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                    id="5349a183-c550-43f4-8c6b-70b1f4d11db1" name="Micro SD RAM Card - SW"
+                    nature="NODE"/>
+              </ownedPhysicalComponents>
+            </ownedPhysicalComponents>
+            <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                id="748ad4c5-b43f-4a3d-8b97-208ad5e7f2bb" name="GPIO 40 pin Header - HW"
+                nature="NODE"/>
+            <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                id="9a467a37-4bab-464a-979d-13d4d066a84f" name="HDMI monitor connectors - HW"
+                nature="NODE"/>
+          </ownedPhysicalComponents>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="56f07f04-15d4-4ccf-81a2-654cdf0f5f55" name="BreadBoard - HW" nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="bb0868f0-edcc-43db-8b57-97f520257066" name="Power Cables - HW" nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="316cb2d7-38ff-4ebf-aa5d-86f2bfb5c4de" name="Ultrasonic Sensor - HW"
+              nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="165d7b67-82e8-4a0c-83a5-c1174b5fd912" name="Camera Sensor - HW"
+              nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="67d562f0-f4a1-49a6-baf4-596db6189bac" name="HDMI Cable - HW" nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="2399cff6-ca1e-41ad-8d9a-dc1fee02762a" name="Micro SD RAM Card - SW"
+              nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="25d5ff93-7ad2-47ec-8001-3d3494e63de6" name="Micro SD RAM Card - HW"
+              nature="BEHAVIOR"/>
         </ownedPhysicalComponents>
         <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
             id="c685695f-0bae-485d-8d1e-c7d612d7d6d9" name="Operator" actor="true"
