@@ -31,7 +31,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/logical.odesign#//@ownedViewpoints[name='Logical%20Architecture']/@ownedRepresentations[name='Logical%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.la:LogicalComponentPkg" href="Project.capella#da6b6eef-161c-4bf9-b0c0-87a5d72717d4"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0klyYAwDEfGRtNrlHjRRDw" name="Clone of [LAB] Structure" repPath="#_0khg8QwDEfGRtNrlHjRRDw" changeId="1771418498871">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0klyYAwDEfGRtNrlHjRRDw" name="Clone of [LAB] Structure" repPath="#_0khg8QwDEfGRtNrlHjRRDw" changeId="1771419814814">
         <eAnnotations xmi:type="description:DAnnotation" uid="_0khg8AwDEfGRtNrlHjRRDw" source="https://www.polarsys.org/capella/dannotation/DesactivatedFilters">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0kqq4AwDEfGRtNrlHjRRDw" key="hide.computed.component.exchanges.filter" value="true"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0kqq4QwDEfGRtNrlHjRRDw" key="hide.computed.physical.links.filter" value="true"/>
@@ -12470,7 +12470,7 @@
                       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko2aAwDEfGRtNrlHjRRDw"/>
                     </children>
                     <styles xmi:type="notation:ShapeStyle" xmi:id="_0ko2aQwDEfGRtNrlHjRRDw" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko2agwDEfGRtNrlHjRRDw" x="60" y="-2" width="10" height="10"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko2agwDEfGRtNrlHjRRDw" x="66" y="-2" width="10" height="10"/>
                   </children>
                   <children xmi:type="notation:Node" xmi:id="_0ko2awwDEfGRtNrlHjRRDw" type="3001" element="_0kj9sQwDEfGRtNrlHjRRDw">
                     <children xmi:type="notation:Node" xmi:id="_0ko2bAwDEfGRtNrlHjRRDw" visible="false" type="5001">
@@ -12882,17 +12882,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_0ko3iQwDEfGRtNrlHjRRDw" type="4001" element="_0kj-HgwDEfGRtNrlHjRRDw" source="_0ko2kwwDEfGRtNrlHjRRDw" target="_0ko2YwwDEfGRtNrlHjRRDw">
           <children xmi:type="notation:Node" xmi:id="_0ko3igwDEfGRtNrlHjRRDw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko3iwwDEfGRtNrlHjRRDw" x="2" y="-37"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko3iwwDEfGRtNrlHjRRDw" x="4" y="-35"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_0ko3jAwDEfGRtNrlHjRRDw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko3jQwDEfGRtNrlHjRRDw" x="27" y="-5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko3jQwDEfGRtNrlHjRRDw" x="25" y="-5"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_0ko3jgwDEfGRtNrlHjRRDw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko3jwwDEfGRtNrlHjRRDw" x="5" y="-7"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ko3jwwDEfGRtNrlHjRRDw" x="2" y="-7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_0ko3kAwDEfGRtNrlHjRRDw" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_0ko3kQwDEfGRtNrlHjRRDw" fontColor="16777215" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0ko3kgwDEfGRtNrlHjRRDw" points="[-1, 5, 5, -51]$[-6, 51, 0, -5]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0ko3kgwDEfGRtNrlHjRRDw" points="[0, 5, 0, -51]$[0, 51, 0, -5]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ko3kwwDEfGRtNrlHjRRDw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ko3lAwDEfGRtNrlHjRRDw" id="(0.5,0.5)"/>
         </edges>
