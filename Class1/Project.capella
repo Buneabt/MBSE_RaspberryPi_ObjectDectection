@@ -3539,6 +3539,18 @@
                 id="c0d99948-3957-4bcc-af33-539418fa37dd" targetElement="#149cadeb-cedf-45cc-b98c-35d7e6b63f92"
                 sourceElement="#e551c63f-d73e-4798-96b1-357794233493"/>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
+              id="44003837-bc30-46ef-b281-cf08532f92a1" name="PhysicalFunction 33"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
+              id="6fa6d341-13ba-421d-8453-e0fe6e2bdd84" name="PhysicalFunction 34">
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="6048b533-7875-49bd-ad19-573ecd6dc146" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
+              id="04f8e6a8-c89f-45fd-837b-72e098b0b58c" name="PhysicalFunction 35">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="09debeca-ebda-40e8-9db8-7959aafc7bbe" name="FIP 1"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="06662939-c940-4cca-9040-7caaa9ce69a4" targetElement="#25170eba-a25a-4eb2-ab47-fe65bcf5100d"
               sourceElement="#c0b19130-7998-4fbc-a23d-34ee80b44a61"/>
@@ -3787,6 +3799,9 @@
                 id="c8f56a6a-ceeb-46e6-ab3a-30331c8297e7" targetElement="#07d40632-f091-44f3-9a0e-9f292670e17e"
                 sourceElement="#19c4d32a-b223-4ea7-8ad4-d2ae711ca640"/>
           </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="ad98e354-c422-4358-a9d4-5725f65696f7" name="FunctionalExchange 36"
+              target="#09debeca-ebda-40e8-9db8-7959aafc7bbe" source="#6048b533-7875-49bd-ad19-573ecd6dc146"/>
         </ownedPhysicalFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
@@ -3809,11 +3824,17 @@
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="cc6bba64-4853-4bc8-a14c-54aeb9f3399c"
             name="Physical System" abstractType="#dc729bc2-aa46-4c2c-9b58-7d885764780d"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="2ec7c95e-8735-43c8-baf7-f6d9b18bb404"
-            name="Operator" abstractType="#c685695f-0bae-485d-8d1e-c7d612d7d6d9"/>
+            name="Operator" abstractType="#c685695f-0bae-485d-8d1e-c7d612d7d6d9">
+          <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+              id="0ae37519-38aa-4911-a525-490370f9fa96" deployedElement="#dc44dbea-c9ec-40cc-9c2d-7d4d4c63321a"
+              location="#2ec7c95e-8735-43c8-baf7-f6d9b18bb404"/>
+        </ownedParts>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6bb19231-ba67-4a28-b556-225569f4534c"
             name="Sonar" abstractType="#456f6aa3-f4c9-4b9a-9a23-cae1ca273979"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="25188baa-3988-4fd0-9c95-430b6ac2a844"
             name="Visual" abstractType="#f54b9687-d4d0-412c-98c2-cd7fee557815"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="928c164a-52a3-42c2-a776-eb453bab8108"
+            name="PA 5" abstractType="#ec5830d7-6008-4081-8b46-5f8eaecdd561"/>
         <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
             id="dc729bc2-aa46-4c2c-9b58-7d885764780d" name="Physical System">
           <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
@@ -3851,19 +3872,61 @@
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="737b5edc-078f-4f56-8480-38c1f7beef4a"
               name="RP4 Assembly - HW/SW" abstractType="#4fe52d9d-8d4c-4f5b-8694-54798ed6e3a5"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="2eff3086-70e6-496b-b507-8372f9d867be"
-              name="BreadBoard - HW" abstractType="#56f07f04-15d4-4ccf-81a2-654cdf0f5f55"/>
+              name="BreadBoard - HW" abstractType="#56f07f04-15d4-4ccf-81a2-654cdf0f5f55">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="2e81a76c-65a8-4c54-b6bf-abefba37e23a" deployedElement="#a7815006-ff62-4c93-91de-6db22550ffb0"
+                location="#2eff3086-70e6-496b-b507-8372f9d867be"/>
+          </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="8d39ecbe-b6f9-40aa-ac19-258dbd0e19c1"
               name="Power Cables - HW" abstractType="#bb0868f0-edcc-43db-8b57-97f520257066"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="1df7aaa5-5eab-410e-8695-26bc2741c4b3"
-              name="Ultrasonic Sensor - HW" abstractType="#316cb2d7-38ff-4ebf-aa5d-86f2bfb5c4de"/>
+              name="Ultrasonic Sensor - HW" abstractType="#316cb2d7-38ff-4ebf-aa5d-86f2bfb5c4de">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="5cf90a1b-dce0-4d59-a43c-602ad1a2b0b8" deployedElement="#abd55871-018a-4c0a-8273-f9f95afb0486"
+                location="#1df7aaa5-5eab-410e-8695-26bc2741c4b3"/>
+          </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="be824bf2-f2db-42d8-9882-3972c40f2ed4"
-              name="Camera Sensor - HW" abstractType="#165d7b67-82e8-4a0c-83a5-c1174b5fd912"/>
+              name="Camera Sensor - HW" abstractType="#165d7b67-82e8-4a0c-83a5-c1174b5fd912">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="ae94e047-abc0-469a-89bc-66c20fc18a76" deployedElement="#fd6dfb91-948f-4067-afc5-099f6f10133a"
+                location="#be824bf2-f2db-42d8-9882-3972c40f2ed4"/>
+          </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="3cf2d17c-fa3e-4b19-a759-274b1bf17600"
-              name="HDMI Cable - HW" abstractType="#67d562f0-f4a1-49a6-baf4-596db6189bac"/>
+              name="HDMI Cable - HW" abstractType="#67d562f0-f4a1-49a6-baf4-596db6189bac">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="8d7ab61b-7668-435c-8a1f-5ba64d3991e4" deployedElement="#83e03fe8-c2ba-42ad-9378-d59ca1bcbb1e"
+                location="#3cf2d17c-fa3e-4b19-a759-274b1bf17600"/>
+          </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="58ad61cc-80ed-444b-918c-d736b0936c0e"
               name="Micro SD RAM Card - SW" abstractType="#2399cff6-ca1e-41ad-8d9a-dc1fee02762a"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="d62a7c10-ad04-47b0-a69a-430e11d371fb"
               name="Micro SD RAM Card - HW" abstractType="#25d5ff93-7ad2-47ec-8001-3d3494e63de6"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="a7815006-ff62-4c93-91de-6db22550ffb0"
+              name="Sensor Aggregation" abstractType="#bddd69b0-e90f-4131-8463-32592ebacf84"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="48d661b6-0955-4bb1-9b74-2256eca5312e"
+              name="External Hardware Input/Output" abstractType="#e0e68b1a-f392-4d5b-bf96-039cfbadcbe5"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b1e71c7a-1f92-40a5-86e7-8a24fb35e49e"
+              name="Information Cable - HW" abstractType="#263e70cc-89cc-48d0-b187-3a857a99c4ff">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="8c89bc88-b54f-4666-9d88-3890d8fac77e" deployedElement="#4ae90cb1-af32-4c9e-ba7c-d987cf4f6f2d"
+                location="#b1e71c7a-1f92-40a5-86e7-8a24fb35e49e"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="c3270f3e-69f9-4512-8515-0ad6688f4c5f"
+              name="Performs Logic - HW/SW" abstractType="#0586f283-f2a5-4e11-9441-3c31ef569871"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="21ee7de6-793d-47b5-bc42-53b76e5dd0fb"
+              name="Power Input - HW" abstractType="#7db8abf9-e1dc-4f22-b116-448976b501f1"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="dc44dbea-c9ec-40cc-9c2d-7d4d4c63321a"
+              name="Operator" abstractType="#1f6f8bdc-9d35-41e5-b411-3938e64ab10a"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="1c851a99-5a54-491e-982e-c4679e32e82b"
+              name="HDMI Ports - HW" abstractType="#420902a0-d0f1-4416-81e3-09be7290ba9b"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="4ae90cb1-af32-4c9e-ba7c-d987cf4f6f2d"
+              name="Transfer Power - HW" abstractType="#09912bfb-e0ac-4513-8c40-8807572c3c17"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="83e03fe8-c2ba-42ad-9378-d59ca1bcbb1e"
+              name="HDMI Cable - HW" abstractType="#84ad2124-6311-4108-8eaf-4bf2b3a405dc"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="abd55871-018a-4c0a-8273-f9f95afb0486"
+              name="Ultrasonic Sensor - HW" abstractType="#59b9cf4f-ac21-4dbf-8054-0bcd34f5b11c"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="fd6dfb91-948f-4067-afc5-099f6f10133a"
+              name="Camera Sensor - HW" abstractType="#a354203a-135d-49f3-87ec-418b671816e5"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="772ad8b8-de2f-4759-812e-d6a33bc975fb" targetElement="#b2aee271-cb09-483d-921e-3ce195d385be"
               sourceElement="#dc729bc2-aa46-4c2c-9b58-7d885764780d"/>
@@ -4025,13 +4088,33 @@
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="5f807f0e-93b8-4f7e-aa7b-b0b776a7b0db"
                 name="SoC - HW/SW" abstractType="#63982c79-e518-42d5-97f3-d744157036f4"/>
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="e0ab10ce-453d-4769-aa71-fcf94cbb87c4"
-                name="GPIO 40 pin Header - HW" abstractType="#748ad4c5-b43f-4a3d-8b97-208ad5e7f2bb"/>
+                name="GPIO 40 pin Header - HW" abstractType="#748ad4c5-b43f-4a3d-8b97-208ad5e7f2bb">
+              <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                  id="7fa2c4d7-e182-4098-b186-3310f9522b63" deployedElement="#48d661b6-0955-4bb1-9b74-2256eca5312e"
+                  location="#e0ab10ce-453d-4769-aa71-fcf94cbb87c4"/>
+            </ownedFeatures>
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="4b6e53d6-628b-469d-abdc-9149835f3efd"
-                name="HDMI monitor connectors - HW" abstractType="#9a467a37-4bab-464a-979d-13d4d066a84f"/>
+                name="HDMI monitor connectors - HW" abstractType="#9a467a37-4bab-464a-979d-13d4d066a84f">
+              <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                  id="3941d9bf-b225-4ab4-bbb5-517ba7ebf8ed" deployedElement="#1c851a99-5a54-491e-982e-c4679e32e82b"
+                  location="#4b6e53d6-628b-469d-abdc-9149835f3efd"/>
+            </ownedFeatures>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="f92907a4-e811-4b64-85a1-5244bf1e7ad9"
+                name="Power Port - HW" abstractType="#87c621fa-b3e8-4303-b3d8-ed16c0b746f2">
+              <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                  id="52988fc0-7fa5-43f6-91f9-c2e5ede2d383" deployedElement="#21ee7de6-793d-47b5-bc42-53b76e5dd0fb"
+                  location="#f92907a4-e811-4b64-85a1-5244bf1e7ad9"/>
+            </ownedFeatures>
             <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
                 id="63982c79-e518-42d5-97f3-d744157036f4" name="SoC - HW/SW" nature="NODE">
               <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="0417d012-1bb8-400e-ba23-e8dad41e27c6"
                   name="Micro SD RAM card - HW/SW" abstractType="#87e938eb-2522-4eb6-bc38-ed90cc6036ca"/>
+              <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="39da2875-1b3d-431c-b669-6de809cbe1c9"
+                  name="Broadcom BCM2711 CPU" abstractType="#272f732a-cee2-47b4-939e-71d4b72fa347">
+                <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                    id="f0b00929-c6e4-4391-9caf-ab3b7387d37f" deployedElement="#c3270f3e-69f9-4512-8515-0ad6688f4c5f"
+                    location="#39da2875-1b3d-431c-b669-6de809cbe1c9"/>
+              </ownedFeatures>
               <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
                   id="87e938eb-2522-4eb6-bc38-ed90cc6036ca" name="Micro SD RAM card - HW/SW"
                   nature="NODE">
@@ -4054,13 +4137,24 @@
                     id="5349a183-c550-43f4-8c6b-70b1f4d11db1" name="Micro SD RAM Card - SW"
                     nature="NODE"/>
               </ownedPhysicalComponents>
+              <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                  id="272f732a-cee2-47b4-939e-71d4b72fa347" name="Broadcom BCM2711 CPU"
+                  nature="NODE"/>
             </ownedPhysicalComponents>
             <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
                 id="748ad4c5-b43f-4a3d-8b97-208ad5e7f2bb" name="GPIO 40 pin Header - HW"
-                nature="NODE"/>
+                nature="NODE">
+              <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="efaa190f-6300-4ff5-9fd4-2b1cdf5addd1"
+                  name="PA 1" abstractType="#e7a6aeb9-ad1b-4667-8572-84502197d8c2"/>
+              <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                  id="e7a6aeb9-ad1b-4667-8572-84502197d8c2" name="PA 1" actor="true"
+                  nature="NODE"/>
+            </ownedPhysicalComponents>
             <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
                 id="9a467a37-4bab-464a-979d-13d4d066a84f" name="HDMI monitor connectors - HW"
                 nature="NODE"/>
+            <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                id="87c621fa-b3e8-4303-b3d8-ed16c0b746f2" name="Power Port - HW" nature="NODE"/>
           </ownedPhysicalComponents>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
               id="56f07f04-15d4-4ccf-81a2-654cdf0f5f55" name="BreadBoard - HW" nature="NODE"/>
@@ -4076,9 +4170,50 @@
               id="67d562f0-f4a1-49a6-baf4-596db6189bac" name="HDMI Cable - HW" nature="NODE"/>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
               id="2399cff6-ca1e-41ad-8d9a-dc1fee02762a" name="Micro SD RAM Card - SW"
-              nature="BEHAVIOR"/>
+              nature="BEHAVIOR">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="fcd49910-cb6a-4b21-b2bb-b2f232bac8c0" targetElement="#44003837-bc30-46ef-b281-cf08532f92a1"
+                sourceElement="#2399cff6-ca1e-41ad-8d9a-dc1fee02762a"/>
+          </ownedPhysicalComponents>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
               id="25d5ff93-7ad2-47ec-8001-3d3494e63de6" name="Micro SD RAM Card - HW"
+              nature="BEHAVIOR">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="9caf7316-6310-463e-9c6a-33f7d17992e0" targetElement="#04f8e6a8-c89f-45fd-837b-72e098b0b58c"
+                sourceElement="#25d5ff93-7ad2-47ec-8001-3d3494e63de6"/>
+          </ownedPhysicalComponents>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="bddd69b0-e90f-4131-8463-32592ebacf84" name="Sensor Aggregation"
+              nature="BEHAVIOR">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="9f6ac7bb-01f4-407e-884e-f7fc7d2f6354" targetElement="#6fa6d341-13ba-421d-8453-e0fe6e2bdd84"
+                sourceElement="#bddd69b0-e90f-4131-8463-32592ebacf84"/>
+          </ownedPhysicalComponents>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="e0e68b1a-f392-4d5b-bf96-039cfbadcbe5" name="External Hardware Input/Output"
+              nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="263e70cc-89cc-48d0-b187-3a857a99c4ff" name="Information Cable - HW"
+              nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="0586f283-f2a5-4e11-9441-3c31ef569871" name="Performs Logic - HW/SW"
+              nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="7db8abf9-e1dc-4f22-b116-448976b501f1" name="Power Input - HW" nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="1f6f8bdc-9d35-41e5-b411-3938e64ab10a" name="Operator" nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="420902a0-d0f1-4416-81e3-09be7290ba9b" name="HDMI Ports - HW" nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="09912bfb-e0ac-4513-8c40-8807572c3c17" name="Transfer Power - HW"
+              nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="84ad2124-6311-4108-8eaf-4bf2b3a405dc" name="HDMI Cable - HW" nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="59b9cf4f-ac21-4dbf-8054-0bcd34f5b11c" name="Ultrasonic Sensor - HW"
+              nature="BEHAVIOR"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="a354203a-135d-49f3-87ec-418b671816e5" name="Camera Sensor - HW"
               nature="BEHAVIOR"/>
         </ownedPhysicalComponents>
         <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
@@ -4140,6 +4275,8 @@
               id="06db0530-06f9-4518-8c27-1830b48cbe3a" targetElement="#94289296-a2bb-4cfe-8a8b-24ad4cc638a9"
               sourceElement="#f54b9687-d4d0-412c-98c2-cd7fee557815"/>
         </ownedPhysicalComponents>
+        <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+            id="ec5830d7-6008-4081-8b46-5f8eaecdd561" name="PA 5" actor="true" nature="NODE"/>
       </ownedPhysicalComponentPkg>
       <ownedLogicalArchitectureRealizations xsi:type="org.polarsys.capella.core.data.pa:LogicalArchitectureRealization"
           id="f1daf757-9580-4979-ac5e-174bf74f4595" targetElement="#661a05be-0bba-4cfa-b32d-e0d77e63dca4"
