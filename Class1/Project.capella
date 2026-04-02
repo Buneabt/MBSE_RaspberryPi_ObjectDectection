@@ -2959,6 +2959,8 @@
                 id="db1163b0-f533-470b-bab5-1e3001953493" name="FOP 1"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="66e04c61-a4e1-47e2-ac1e-eca005ec2679" name="FOP 2"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="1fd9adc2-e842-4902-9867-53319a2fa924" name="FOP 3"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="efd02762-dbd1-4609-826a-662144ebb556" targetElement="#686ecf80-3ac9-4093-b913-be035ea28dd7"
                 sourceElement="#00ba0e6c-bf9d-4474-8fd1-3149a20b252d"/>
@@ -2987,6 +2989,8 @@
                 id="cc599966-b847-461d-9d3d-fd79dccfb779" name="FIP 2"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="8b3ab341-73dc-4639-804b-78cf5b57055b" name="FOP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="7c412d06-8dba-47f9-97c5-ccccad4ef834" name="FOP 2"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="7a2aefc7-1794-4346-b224-0b30f24d70c6" targetElement="#650e258a-ccb7-481f-a958-c2e21ef547b3"
                 sourceElement="#b970df12-51ef-40ca-90d8-792b53f2247e"/>
@@ -3223,7 +3227,7 @@
                 sourceElement="#97442397-51bf-4243-be55-5a0300ffc8d6"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
-              id="41a1d24f-1b53-4a29-b606-da82311d71eb" name="4.5 Aggregate Data">
+              id="41a1d24f-1b53-4a29-b606-da82311d71eb" name="4.5 Get Data">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="ba7ebb07-0c99-4870-892b-8aa50c2895d7" name="FIP 1"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
@@ -3233,7 +3237,7 @@
                 sourceElement="#41a1d24f-1b53-4a29-b606-da82311d71eb"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
-              id="53c60ca3-32b3-4c2d-8a74-912db7ff5027" name="5.1 Store Processed Data">
+              id="53c60ca3-32b3-4c2d-8a74-912db7ff5027" name="5.1 Store Raw Data">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="70fd08a3-00a4-4837-a4b9-9115843a08b1" name="FIP 1"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
@@ -3422,9 +3426,13 @@
                 id="3e65a862-9c21-4c32-9dd0-c84d35b168ed" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
-              id="9e692bbc-1d58-4c7f-9cba-0478501fd146" name="4.5.1 Send Aggregated Data">
+              id="9e692bbc-1d58-4c7f-9cba-0478501fd146" name="4.5.1 Send Data">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="1d7e5639-3be4-41fd-9d32-6c124360154d" name="FIP 1"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="94c61380-307a-4845-b1fd-625b2b79a6ac" name="FIP 2"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="e4c3cb05-6cf4-486a-94b8-e7dd47d43d92" name="FIP 3"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="4f12fa58-af9b-4b57-9172-f8ef703409c6" name="FOP 1"/>
           </ownedFunctions>
@@ -3632,6 +3640,12 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="992c3617-8e52-473d-92d0-bce957dea652" name="Power Power" target="#1dc5e7e6-597c-428f-9c79-bbcad06b4ca8"
               source="#de6ed635-3846-44b8-85ef-006ebd713a6e"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="becfa800-a86c-4eb8-8425-f025c75480c3" name="Sonar Data" target="#94c61380-307a-4845-b1fd-625b2b79a6ac"
+              source="#1fd9adc2-e842-4902-9867-53319a2fa924"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="e47f7a8a-422f-44f0-b254-809449b852fa" name="Camera Data" target="#e4c3cb05-6cf4-486a-94b8-e7dd47d43d92"
+              source="#7c412d06-8dba-47f9-97c5-ccccad4ef834"/>
         </ownedPhysicalFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
@@ -3701,12 +3715,6 @@
               name="Data Storage System" abstractType="#73b8cb5e-1a08-4e5f-8ade-ba436141849a"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="737b5edc-078f-4f56-8480-38c1f7beef4a"
               name="RP4 Assembly - HW/SW" abstractType="#4fe52d9d-8d4c-4f5b-8694-54798ed6e3a5"/>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="2eff3086-70e6-496b-b507-8372f9d867be"
-              name="BreadBoard - HW" abstractType="#56f07f04-15d4-4ccf-81a2-654cdf0f5f55">
-            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
-                id="2e81a76c-65a8-4c54-b6bf-abefba37e23a" deployedElement="#a7815006-ff62-4c93-91de-6db22550ffb0"
-                location="#2eff3086-70e6-496b-b507-8372f9d867be"/>
-          </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="8d39ecbe-b6f9-40aa-ac19-258dbd0e19c1"
               name="Power Cables - HW" abstractType="#bb0868f0-edcc-43db-8b57-97f520257066"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="1df7aaa5-5eab-410e-8695-26bc2741c4b3"
@@ -3990,8 +3998,6 @@
                   nature="NODE"/>
             </ownedPhysicalComponents>
           </ownedPhysicalComponents>
-          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
-              id="56f07f04-15d4-4ccf-81a2-654cdf0f5f55" name="BreadBoard - HW" nature="NODE"/>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
               id="bb0868f0-edcc-43db-8b57-97f520257066" name="Power Cables - HW" nature="NODE"/>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
